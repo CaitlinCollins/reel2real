@@ -37,6 +37,6 @@ const recordData =
         "spotifyurl": "https://open.spotify.com/album/3KCJzwKOdBxDu6TKaFPqM9?si=llgXk-jLQ9K2qgbg0TnpGw"
     }
 ];
-const seedRecords = () => User.bulkCreate(recordData);
+const seedRecords = () => Record.bulkCreate(recordData);
 
 module.exports = seedRecords;
