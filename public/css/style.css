@@ -1,0 +1,31 @@
+body {
+    background-image: url("../images/reel_logo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#reel2 {
+    height: 70px;
+    margin: 5px 10px 10px 10px;
+    float: right;
+    cursor: pointer;
+}
+
+a {
+    float: left;
+    margin: 5px 10px 10px 10px;
+    color: antiquewhite;
+    font-size: 22px;
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+a:hover {
+    color: fuchsia;
+}
+
+#build {
+    height: 250px;
+    margin-left: 80px;
+    cursor: pointer;
+}
