@@ -1,27 +1,27 @@
 [
     {
-      "name": "Bob",
-      "email": "BobLogBlog@hotmail.com",
+      "username": "Bobsvinyl",
+      "email": "Bobsvinyl@hotmail.com",
       "password": "password12345"
     },
     {
-      "name": "Steve",
-      "email": "SteveDave@gmail.com",
+      "username": "PutItonWax",
+      "email": "Rupertskillz@gmail.com",
       "password": "password12345"
     },
     {
-      "name": "Crash",
-      "email": "CrashOverride@aol.com",
+      "username": "2Turntables",
+      "email": "2turntables@aol.com",
       "password": "password12345"
     },
     {
-      "name": "Ted",
-      "email": "theodorelogan@msn.com",
+      "username": "AudiophileTed",
+      "email": "TedsEars@msn.com",
       "password": "password12345"
     },
     {
-      "name": "Bill",
-      "email": "bill.s.preston.esq@yahoo.com",
+      "username": "Bsides",
+      "email": "Bsides@yahoo.com",
       "password": "password12345"
     }
   ]
