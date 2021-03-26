@@ -4,9 +4,13 @@ body {
     background-size: 100%;
 }
 
+#mainHeader {
+    height: 100px;
+}
+
 #reel2 {
-    height: 70px;
-    margin: 5px 10px 10px 10px;
+    height: 150px;
+    margin: 20px 10px 10px 10px;
     float: right;
     cursor: pointer;
 }
@@ -25,10 +29,39 @@ a:hover {
 }
 
 #build {
-    height: 250px;
-    margin-left: 80px;
+    height: 280px;
+    margin-left: 130px;
+    transform: rotate(20deg);
     cursor: pointer;
 }
+
+@keyframes spinning {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+#build:hover {
+    animation-name: spinning;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+#genre {
+    height: 280px;
+    margin: 50px 0 0 100px;
+    transform: rotate(-10deg);
+    cursor: pointer;
+}
+
+#genre:hover {
+    animation-name: spinning;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+
 .hide {
     display: none;
 }
