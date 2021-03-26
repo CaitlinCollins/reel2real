@@ -1,4 +1,8 @@
 const User = require('./User');
-const Crate = require('./Crate');
 
-module.exports = { User };
+const Record = require('./Record');
+
+module.exports = { User, Record };
+
+
+
