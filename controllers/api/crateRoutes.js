@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, Record } = require('../../models');
-const albumInfo = require('../../../Spotify Test/spot')
-console.log(getR)
+// const albumInfo = require('../../../Spotify Test/spot')
+// console.log(getR)
 
 router.get('/', async (req, res) => {
   try {
