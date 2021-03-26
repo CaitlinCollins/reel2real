@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const { User, Record } = require('../../models');
+const { User, Record } = require('../models');
 
-router.get('/search',  async (req, res) => {
+router.get('/',  async (req, res) => {
     try {
         res.render('search', {
             loggedIn: req.session.loggedIn,
