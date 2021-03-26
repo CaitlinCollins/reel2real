@@ -1,7 +1,7 @@
 // import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require("sequelize");
 // import our database connection from config.js
-const sequelize = require('../config/connection');
+const sequelize = require("../config/connection");
 
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Record extends Model {}
@@ -13,7 +13,7 @@ Record.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     record_name: {
       type: DataTypes.STRING,
@@ -28,26 +28,26 @@ Record.init(
       },
     },
 
-        genre:  {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        imageUrl: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    imageUrl: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
 
-        spotifyUrl: {
-          type: DataTypes.STRING,
-          allowNull: false
-      },
+    spotifyUrl: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'record',
+    modelName: "record",
   }
 );
 
