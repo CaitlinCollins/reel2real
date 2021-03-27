@@ -5,11 +5,11 @@ const getSearch = require("../../utils/search")
 const router = require('express').Router();
 const { User, Record } = require('../../models');
 
-router.get('/', async (req, res) => {
+router.get('/:userArtistSearch', async (req, res) => {
     try{
       // const records = getSearch(res).map((project) => project.get({plain: true}))
       // res.render('search', {})
-      getSearch(res)
+      getSearch(res, req.params.userArtistSearch)
     } catch (err) {
       console.log(err);
     }
