@@ -26,14 +26,14 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/search',  async (req, res) => {
-  try {
-      res.render('search', {
-          logged_in: req.session.logged_in,
-        });
-  }catch (err){
-      res.status(500).json(err);
-    }
+
+router.get('/signup', async (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/home');
+    return;
+  }
+  res.render('signup');
+
 });
 
 module.exports = router;
