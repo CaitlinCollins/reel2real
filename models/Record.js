@@ -19,7 +19,10 @@ Record.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     price: {
       type: DataTypes.DECIMAL(10.2),
       allowNull: false,
@@ -27,9 +30,8 @@ Record.init(
         isDecimal: true,
       },
     },
-
-    genre: {
-      type: DataTypes.STRING,
+    masterId: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     imageUrl: {
@@ -37,7 +39,7 @@ Record.init(
       allowNull: false,
     },
 
-    spotifyUrl: {
+    resourceUrl: {
       type: DataTypes.STRING,
       allowNull: false,
     },
