@@ -1,7 +1,5 @@
 const router = require('express').Router();
-const { User, Record } = require('../../models');
-// const albumInfo = require('../../../Spotify Test/spot')
-// console.log(getR)
+const { User, Record } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -11,8 +9,9 @@ router.get('/', async (req, res) => {
 
     const records = recordData.map((project) => project.get({ plain: true }));
 
-    res.render('homepage', {
+    res.render('crates', {
       records,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
