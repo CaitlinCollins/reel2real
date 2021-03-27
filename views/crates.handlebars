@@ -1,1 +1,17 @@
 <h1>This is the crates page</h1>
+<section class="container">
+  
+  <!-- If the user is logged in, render the gallery content -->
+  {{#if loggedIn}}
+  <section class="flex-row justify-center">
+    {{#each album }}
+    {{>album-details}}
+    {{/each}}
+  </section>
+</section>
+<!-- Otherwise, provide a link to login -->
+{{else}}
+<a href="/login">You must login first to view the paintings</a>
+{{/if}}
+
+</div>
