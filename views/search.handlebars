@@ -1,5 +1,16 @@
-<div>
-
-<H1> Here is a search bar</H1>
-
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Search by Artist: </h5>
+                <input class="form-input" type="text" id="search-artist">
+                <button id="searchBtn" class="btn btn-primary">Show Me the Vinyl</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        {{!-- {{#each filteredRecords as |newRecord|}} --}}
+        {{>recordResults}}
+        {{!-- {{/each}} --}}
+    </div>
 </div>
