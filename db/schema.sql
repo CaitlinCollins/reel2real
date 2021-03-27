@@ -1,2 +1,4 @@
 DROP DATABASE IF EXISTS reel_db;
 CREATE DATABASE reel_db;
+
+USE reel_db;
