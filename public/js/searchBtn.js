@@ -4,17 +4,9 @@ const search = async (event) => {
     // Trim and get the value of the search input.
     const artist = document.querySelector('#search-artist').value.trim();
 
-    // var postBody = {
-    //     record_name: record_name,
-    //     genre: genre,
-    //     price: price,
-    //     masterId: masterId,
-    //     imageUrl: imageUrl,
-    //     resourceUrl: resourceUrl,
-    // }
     // If search input exists, go to get route.
     if (artist) {
-        const response = await fetch('/search/results', 
+        const response = await fetch(`/api/search/${artist}`, 
         {
             method: 'GET',
             body: JSON.stringify(artist),
@@ -24,7 +16,7 @@ const search = async (event) => {
 
     // If everything is ok, refresh the page.
     if (response.ok) {
-        window.location.reload();
+        console.log(response);
     }
     else {
         console.log('Search failed.')
