@@ -15,6 +15,33 @@ body {
     cursor: pointer;
 }
 
+h1 {
+    font-size: 46px;
+    color: turquoise;
+    background-color: black;
+    width: 245px;
+    padding: 12px;
+    margin-left: 12px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: turquoise;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.card {
+    margin: 10px;
+    display: inline-block;
+    background-color: black;
+}
+
+.card-text {
+    color: antiquewhite;
+}
+
 a {
     float: left;
     margin: 5px 10px 10px 10px;
@@ -64,4 +91,21 @@ a:hover {
 
 .hide {
     display: none;
+}
+
+#searchBtn {
+    background-color: turquoise;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: bolder;
+    margin-left: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+}
+
+#search-artist {
+    margin-top: 5px;
+    width: 220px;
+    height: 36px;
+    display: inline-block;
 }
