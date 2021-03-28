@@ -3,20 +3,20 @@ const { User, Record } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/', async (req, res) => {
-  try {
+// router.get('/', async (req, res) => {
+//   try {
 
-    res.render('crates', {
+//     res.render('crates', {
       
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 
-router.get('/crates', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const crateData = await Record.findAll(
       {
@@ -33,11 +33,11 @@ router.get('/crates', withAuth, async (req, res) => {
         }
       });
     
-    const user_crate = crateData.map((user_crate) => 
-    user_post.get( { plain: true })
+    const user_crates = crateData.map((user_crate) => 
+    user_crate.get( { plain: true })
     );
     res.render('crates', {
-      user_posts,
+      user_crates,
       loggedIn: req.session.loggedIn,
     });
   }

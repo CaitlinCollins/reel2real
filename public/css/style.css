@@ -1,18 +1,10 @@
+/* DESKTOP DISPLAY */
+
 body {
     background-image: url("../images/reel_logo.png");
     background-repeat: no-repeat;
     background-size: 100%;
-}
-
-#mainHeader {
-    height: 100px;
-}
-
-#reel2 {
-    height: 130px;
-    margin: 20px 10px 10px 10px;
-    float: right;
-    cursor: pointer;
+    
 }
 
 h1 {
@@ -25,21 +17,15 @@ h1 {
     font-family:'Courier New', Courier, monospace;
 }
 
+h2 {
+    font-weight: bold;
+}
+
 h5 {
     font-size: 20px;
     font-weight: bolder;
     color: turquoise;
     font-family:'Courier New', Courier, monospace;
-}
-
-.card {
-    margin: 10px;
-    display: inline-block;
-    background-color: black;
-}
-
-.card-text {
-    color: antiquewhite;
 }
 
 a {
@@ -52,7 +38,68 @@ a {
 }
 
 a:hover {
-    color: fuchsia;
+    color: turquoise;
+}
+
+footer {
+    background-color: turquoise;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    height: 32px;
+    text-align: center;
+    padding: 5px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+
+/* CLASS STYLING */
+
+.card {
+    margin: 10px;
+    display: inline-block;
+    background-color: black;
+}
+
+.card-text {
+    color: antiquewhite;
+}
+
+.hide {
+    display: none;
+}
+
+.loginInput
+{
+    margin: 10px;
+}
+
+.loginBtn {
+    background-color: rgb(255, 145, 0);
+    width: 252px;
+    float: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/*  ID STYLING */
+
+
+#mainHeader {
+    height: 100px;
+}
+
+#reel2 {
+    height: 130px;
+    margin: 20px 10px 10px 10px;
+    float: right;
+    cursor: pointer;
+}
+
+@keyframes spinning {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
 }
 
 #build {
@@ -60,11 +107,6 @@ a:hover {
     margin-left: 130px;
     transform: rotate(20deg);
     cursor: pointer;
-}
-
-@keyframes spinning {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(360deg)}
 }
 
 #build:hover {
@@ -88,11 +130,6 @@ a:hover {
     animation-timing-function: ease-in-out;
 }
 
-
-.hide {
-    display: none;
-}
-
 #searchBtn {
     background-color: turquoise;
     margin-bottom: 5px;
@@ -108,4 +145,251 @@ a:hover {
     width: 220px;
     height: 36px;
     display: inline-block;
+}
+
+#loginForm {
+    background-color: black;
+    color: turquoise;
+    padding: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#email {
+    margin-right: 28px;
+}
+
+#password-login, #email-login {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-size: cover;
+        height: 100vh;
+        
+    }
+    #reel2 {
+        height: 90px;
+    }
+
+    #build, #genre {
+        height: 220px;
+    }
+
+    #genre {
+        margin-top: 160px;
+        margin-left: 180px;
+    }
+}
+
+@media only screen and (max-width: 823px) {
+
+    a {
+        font-size: 18px;
+        margin-right: 0px;
+    }
+    #mainHeader {
+        height: 50px;
+    }
+
+    #reel2 {
+        height: 55px;
+        margin-top: 10px;
+    }
+
+    #build {
+        margin-left: 20px;
+        height: 200px;
+    }
+
+    #genre {
+        margin-top: 60px;
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 812px) {
+
+    #reel2 {
+        height: 70px;
+        margin-right: 15px;
+    }
+
+    #build {
+        margin-left: 30px;
+    }
+
+    #genre {
+        margin-left: 80px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-size: cover;
+        height: 110vh;
+
+    }
+
+    #build {
+        margin-top: 60px;
+        margin-left: 80px;
+    }
+
+    #genre {
+        margin-left: 80px;
+        margin-top: 220px;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+
+    #mainHeader {
+        height: 30px;
+    }
+
+    #build {
+        margin-left: 0px;
+        margin-top: 0px;
+        height: 148px;
+    }
+
+    #genre {
+        margin-left: 320px;
+        margin-top: 0px;
+        height: 148px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #build {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+
+    #reel2 {
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    #build {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    #reel2 {
+        height: 55px;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+    #reel2 {
+        margin-right: 10px;
+    }
+    #build {
+        margin-left: 80px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    body {
+        background-size: cover;
+        height: 110vh;
+    }
+
+    #reel2 {
+        height: 50px;
+        margin-right: 0px;
+    }
+
+   
+    #genre {
+        margin-left: 200px;
+        margin-top: 100px;
+    }
+    .loginBtn {
+        margin-right: 66px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    #build {
+        margin-top: 60px;
+    }
+    #genre {
+        margin-top: 100px;
+    }
+    .loginBtn {
+        margin-right: 62px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #reel2 {
+        height: 45px;
+    }
+    .loginBtn {
+        margin-right: 26px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #build {
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+    .loginBtn {
+        margin-right: 12px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+   
+    body {
+        height: 120vh;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    #reel2 {
+        margin-left: 0px;
+        margin-top: 5px;
+        height: 40px;
+    }
+    
+    #genre {
+        margin-left: 160px;
+    }
+
+    .loginBtn {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    a {
+        font-size: 14px;
+    }
+
+    #reel2 {
+        margin-left: 5px;
+    }
+
+    #genre {
+        margin-left: 80px;
+        margin-top: 140px;
+    }
 }
