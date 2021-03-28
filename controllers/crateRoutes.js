@@ -16,7 +16,7 @@ const withAuth = require('../utils/auth');
 // });
 
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const crateData = await Record.findAll(
       {
