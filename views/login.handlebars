@@ -1,25 +1,23 @@
-<div class="card mx-auto" style="width: 25rem;">
-  <div class="card-body">
-    <h5 class="card-title">Login</h5>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-    <div id="alert" class="hide alert alert-secondary" role="alert">
-      Incorrect email or password!
-    </div>
+<div class ="card mx auto mb-3 loginForm">
+<h2>Login</h2>
+
+<form class="form login-form">
+  <div class="form-group loginInput">
+    <label for="email-login" id="email">email:</label>
+    <input class="form-input" type="text" id="email-login" />
   </div>
+  <div class="form-group loginInput">
+    <label for="password-login">password:</label>
+    <input class="form-input" type="password" id="password-login" />
+  </div>
+  <div class="form-group">
+    <button class="btn loginBtn" type="submit">Let's Get Groovy!</button>
+  </div>
+</form>
+<div id="alert" class="hide alert alert-secondary" role="alert">
+      Incorrect email or password!
+<a href="/signup"> Sign up! </a> 
 </div>
 
-
-
 <script src="/js/login.js"></script>
+

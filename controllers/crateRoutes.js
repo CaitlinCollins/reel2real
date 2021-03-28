@@ -1,19 +1,47 @@
 const router = require('express').Router();
 const { User, Record } = require('../models');
+const withAuth = require('../utils/auth');
+
+
+// router.get('/', async (req, res) => {
+//   try {
+
+//     res.render('crates', {
+      
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 
 router.get('/', async (req, res) => {
   try {
-    const recordData = await Record.findAll({
-      order: [['record_name', 'ASC']],
-    });
-
-    const records = recordData.map((project) => project.get({ plain: true }));
-
+    const crateData = await Record.findAll(
+      {
+      include: [
+        {
+          model: User,
+          attributes: [
+            'id',
+          ],
+        },
+      ],
+        where: {
+          user_id: req.session.user_id,
+        }
+      });
+    
+    const user_crates = crateData.map((user_crate) => 
+    user_crate.get( { plain: true })
+    );
     res.render('crates', {
-      records,
-      logged_in: req.session.logged_in,
+      user_crates,
+      loggedIn: req.session.loggedIn,
     });
-  } catch (err) {
+  }
+  catch (err) {
     res.status(500).json(err);
   }
 });

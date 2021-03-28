@@ -5,6 +5,7 @@ const logout = async () => {
     });
   
     if (response.ok) {
+      alert('You are now logged out!')
       document.location.replace('/login');
     } else {
       alert(response.statusText);
