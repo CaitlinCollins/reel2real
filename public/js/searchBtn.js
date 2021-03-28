@@ -19,13 +19,15 @@ const search = async (event) => {
 
             function renderDivs(i, results){
 
-                var name = "Album Name:" + results[i].record_name;
-                var genre = "Genre:" + results[i].genre;
-                var price = "Price:" + results[i].price;
+                var name = "Album Name: " + results[i].record_name;
+                var genre = "Genre: " + results[i].genre;
+                var price = "Price: " + results[i].price;
                 var imageSrc = results[i].imageUrl;
                 var mainUrl = results[i].resourceUrl;
 
                 var newRecord = document.createElement('div');
+                newRecord.setAttribute("class", "record-block")
+
                 var newImage = document.createElement('img');
                 newImage.setAttribute("src", imageSrc);
                 newImage.setAttribute("class", "record-image");
@@ -39,7 +41,7 @@ const search = async (event) => {
 
                 var newGenre = document.createElement('h4')
                 newGenre.setAttribute("class", 'genre')
-                newGenre.setAttribute("id", 'genre-title-' + i)
+                newGenre.setAttribute("id", 'genre-id-' + i)
                 newGenre.textContent = genre;
 
                 var newPrice = document.createElement('h4')
