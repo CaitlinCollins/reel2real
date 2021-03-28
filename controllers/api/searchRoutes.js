@@ -4,8 +4,9 @@ const getSearch = require("../../utils/search")
 
 const router = require('express').Router();
 const { User, Record } = require('../../models');
+const withAuth = require("../../utils/auth");
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     res.render('search');
     return;
