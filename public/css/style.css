@@ -70,6 +70,13 @@ footer {
     display: none;
 }
 
+.loginForm {
+    background-color: black;
+    color: turquoise;
+    padding: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+
 .loginInput
 {
     margin: 10px;
@@ -147,18 +154,11 @@ footer {
     display: inline-block;
 }
 
-#loginForm {
-    background-color: black;
-    color: turquoise;
-    padding: 20px;
-    font-family:'Courier New', Courier, monospace;
-}
-
 #email {
     margin-right: 28px;
 }
 
-#password-login, #email-login {
+#password-login, #email-login, #email-signup, #name-signup, #password-signup {
     font-size: 20px;
     font-weight: bold;
 
