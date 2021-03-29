@@ -19,14 +19,14 @@ const search = async (event) => {
 
             function renderDivs(i, results){
 
-                var name = "Album Name: " + results[i].record_name;
+                var name = results[i].record_name;
                 var genre = "Genre: " + results[i].genre;
-                var price = "Price: " + results[i].price;
+                var price = "Price: $" + results[i].price + ".00";
                 var imageSrc = results[i].imageUrl;
                 var mainUrl = results[i].resourceUrl;
 
                 var newRecord = document.createElement('div');
-                newRecord.setAttribute("class", "record-block")
+                newRecord.setAttribute("class", "card new-record");
 
                 var newImage = document.createElement('img');
                 newImage.setAttribute("src", imageSrc);
@@ -37,14 +37,14 @@ const search = async (event) => {
                 var newRecordName = document.createElement('h3');
                 newRecordName.setAttribute("class", "record-name");
                 newRecordName.setAttribute("id", 'record-title-' + i)
-                newRecordName.innerHTML = '<a href = ' + mainUrl + '>' + name + '</a>';
+                newRecordName.innerHTML = '<a class= "record-name" href = ' + mainUrl + '>' + name + '</a>';
 
-                var newGenre = document.createElement('h4')
+                var newGenre = document.createElement('h3')
                 newGenre.setAttribute("class", 'genre')
                 newGenre.setAttribute("id", 'genre-id-' + i)
                 newGenre.textContent = genre;
 
-                var newPrice = document.createElement('h4')
+                var newPrice = document.createElement('h3')
                 newPrice.setAttribute("class", 'price');
                 newPrice.textContent = price;
                 
@@ -74,7 +74,6 @@ const search = async (event) => {
 
             for (i=0; i<results.length; i++) {
 
-                
                 renderDivs(i, results);
                 
                 
