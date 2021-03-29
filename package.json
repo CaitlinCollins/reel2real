@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/CaitlinCollins/reel2real#readme",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
     "dotenv": "^8.2.0",
