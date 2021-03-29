@@ -30,7 +30,10 @@ h1 {
 }
 
 h2 {
+    color: turquoise;
     font-weight: bold;
+    font-size: 36px;
+    font-family:'Courier New', Courier, monospace;
 }
 
 h3 {
@@ -128,19 +131,28 @@ footer {
 }
 
 .loginForm {
-    background-color: black;
+    width: 80%;
+    height: auto;
+    margin: 40px 0px 100px 0px;
+    display: inline-block;
     color: turquoise;
     padding: 20px;
     font-family:'Courier New', Courier, monospace;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-.loginInput
-{
+.loginInput {
     margin: 10px;
 }
 
+.form-input {
+    width: 252px;
+    float: right;
+} 
+
 .loginBtn {
-    background-color: rgb(255, 145, 0);
+    background-color: turquoise;
     width: 252px;
     float: right;
     margin-right: 10px;
