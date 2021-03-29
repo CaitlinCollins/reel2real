@@ -27,6 +27,7 @@ const search = async (event) => {
 
                 var newRecord = document.createElement('div');
                 newRecord.setAttribute("class", "card new-record");
+
                 var newImage = document.createElement('img');
                 newImage.setAttribute("src", imageSrc);
                 newImage.setAttribute("class", "record-image");
@@ -40,7 +41,7 @@ const search = async (event) => {
 
                 var newGenre = document.createElement('h3')
                 newGenre.setAttribute("class", 'genre')
-                newGenre.setAttribute("id", 'genre-title-' + i)
+                newGenre.setAttribute("id", 'genre-id-' + i)
                 newGenre.textContent = genre;
 
                 var newPrice = document.createElement('h3')

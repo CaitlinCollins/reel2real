@@ -4,10 +4,13 @@ const getSearch = require("../../utils/search")
 
 const router = require('express').Router();
 const { User, Record } = require('../../models');
+const withAuth = require("../../utils/auth");
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
-    res.render('search');
+    res.render('search', {
+      logged_in: req.session.logged_in,
+    });
     return;
   }
   catch (err) {
@@ -24,5 +27,13 @@ router.get('/:userArtistSearch', async (req, res) => {
       console.log(err);
     }
 })
-
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 module.exports = router;
