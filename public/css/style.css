@@ -103,6 +103,7 @@ footer {
 .crate-button {
     background-color: turquoise;
     margin-bottom: 5px;
+    margin-left: 5px;
     color: black;
     font-weight: bolder;
     font-family: 'Courier New', Courier, monospace;
@@ -146,7 +147,7 @@ footer {
     margin: 10px;
 }
 
-.form-input {
+.inputLogin {
     width: 252px;
     float: right;
 } 
