@@ -56,15 +56,21 @@ const search = async (event) => {
                 // var newPrice = document.querySelector('#recordPrice').textContent = price;
                 
                 var addButton = document.createElement('button');
-                addButton.textContent = "Add to My Crate";
+                addButton.textContent = "Add to My Crate!";
                 addButton.setAttribute("class", "crate-button");
                 addButton.setAttribute("id", "crate-button-" + i);
+
+                var moreInfoBtn = document.createElement('button');
+                moreInfoBtn.textContent = "Tell Me More!";
+                moreInfoBtn.setAttribute("class", "crate-button");
+                moreInfoBtn.setAttribute("id", "more-button-" + i);
 
                 newRecord.id = "record-index-" + i;
                 newRecord.appendChild(newImage);
                 newRecord.appendChild(newRecordName);
                 newRecord.appendChild(newGenre);
                 newRecord.appendChild(newPrice);
+                newRecord.appendChild(moreInfoBtn);
                 newRecord.appendChild(addButton);
                 document.querySelector("#recordList").append(newRecord);
 
