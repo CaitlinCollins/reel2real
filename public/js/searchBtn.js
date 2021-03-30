@@ -25,7 +25,7 @@ const search = async (event) => {
 
                 var name = results[i].record_name;
                 var genre = "Genre: " + results[i].genre;
-                var price = "Price: $" + results[i].price + ".00";
+                var price = "Price: $" + results[i].price;
                 var imageSrc = results[i].imageUrl;
                 var mainUrl = results[i].resourceUrl;
 

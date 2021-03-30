@@ -13,7 +13,7 @@ async function getSearch(routeResponse, artistSearch) {
 	// var imageQueryURL = "https://api.discogs.com/masters/{id}?key=nvWMvkXWSygfbACCOVQc&secret=mDVWMOCUTByoFszZgQyjUBnYcYbjnkYB"
 
 
-    var queryUrl = `https://api.discogs.com/database/search?key=${apiKey}&secret=${apiSecret}&artist=${artistSearch}&format=vinyl&country=us&per_page=15&page=1`; 
+    var queryUrl = `https://api.discogs.com/database/search?key=${apiKey}&secret=${apiSecret}&artist=${artistSearch}&format=album+vinyl&country=us&per_page=15&page=1`; 
 
 	let response = await fetch(queryUrl);
 	let data = await response.json();
@@ -24,7 +24,7 @@ async function getSearch(routeResponse, artistSearch) {
 		const newRecord = {
 			record_name: recordsArray[i].title,
 			genre: recordsArray[i].genre[0],
-			price: 10.0,
+			price: (Math.random() * (20.00 - 1.00 + 1.00) + 12.00).toFixed(2),
 			masterId: recordsArray[i].id,
 			imageUrl: recordsArray[i].cover_image,
 			resourceUrl: recordsArray[i].resource_url,
