@@ -15,9 +15,13 @@ const search = async (event) => {
         if (response.ok) {
             let results = await response.json();
             console.log(results);
+            console.log(results.length);
+            if (results.length === 0) {
+                document.querySelector("#recordList").textContent = "No results found for this search. Please try again."
+              }  
             
 
-            function renderDivs(i, results){
+            function renderDivs(i, results) {
 
                 var name = results[i].record_name;
                 var genre = "Genre: " + results[i].genre;
@@ -75,13 +79,13 @@ const search = async (event) => {
                 document.querySelector("#recordList").append(newRecord);
 
                 console.log(name + genre + price + imageSrc + mainUrl);
+               
                 
                 }
 
             for (i=0; i<results.length; i++) {
 
                 renderDivs(i, results);
-                
                 
             }
             
