@@ -36,7 +36,7 @@ const search = async (event) => {
                 newImage.setAttribute("src", imageSrc);
                 newImage.setAttribute("class", "record-image");
                 newImage.setAttribute("id", "recordImage" + i);
-                newImage.setAttribute("alt", results.record_name);
+                newImage.setAttribute("alt", name);
 
                 var newRecordName = document.createElement('h3');
                 newRecordName.setAttribute("class", "record-name");
@@ -65,9 +65,9 @@ const search = async (event) => {
                 addButton.setAttribute("id", "crate-button-" + i);
 
                 var moreInfoBtn = document.createElement('button');
-                moreInfoBtn.textContent = "Tell Me More!";
                 moreInfoBtn.setAttribute("class", "crate-button");
                 moreInfoBtn.setAttribute("id", "more-button-" + i);
+                moreInfoBtn.innerHTML = '<a href = "/' + results[i].masterId + '" title = "' + name + '">Tell Me More!</a>'
 
                 newRecord.id = "record-index-" + i;
                 newRecord.appendChild(newImage);
