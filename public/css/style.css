@@ -50,11 +50,10 @@ h5 {
 }
 
 footer {
-    background-color: black;
     color: turquoise;
     position: fixed;
     width: 100%;
-    bottom: 0px;
+    bottom: 50px;
     height: 32px;
     text-align: center;
     padding: 5px;
@@ -106,8 +105,7 @@ footer {
     margin-left: 5px;
     color: black;
     font-weight: bolder;
-    font-family: 'Courier New', Courier, monospace;
-    
+    font-family: 'Courier New', Courier, monospace; 
 }
 
 .record-image {
@@ -166,13 +164,6 @@ footer {
     display: inline-block;
 }
 
-#reel2 {
-    height: 130px;
-    margin: 20px 10px 10px 10px;
-    float: left;
-    cursor: pointer;
-}
-
 #build {
     height: 320px;
     margin-left: 130px;
@@ -221,37 +212,40 @@ footer {
 }
 
 @media only screen and (max-width: 1024px) {
-    body {
-        background-size: cover;
-        height: 100vh;
-        
-    }
-    #reel2 {
-        height: 90px;
-    }
 
     #build, #genre {
-        height: 220px;
+        height: 300px;
     }
 
     #genre {
-        margin-top: 160px;
-        margin-left: 180px;
+        margin-left: 60px;
+    }
+
+    .inputLogin, .loginBtn {
+        width: 180px;
+        margin-top: 10px;
     }
 }
 
 @media only screen and (max-width: 823px) {
+    footer {
+        bottom: 20px;
+    }
 
-    a {
+    .homeLink {
         font-size: 18px;
-        margin-right: 0px;
-    }
-    #mainHeader {
-        height: 50px;
+        margin-right: 15px;
+        margin-left: 0px;
     }
 
-    #reel2 {
-        height: 55px;
+    .login-form, .signup-form {
+        margin-top: 0px;
+        font-size: 18px;
+        padding: 0px;
+    }
+
+    .inputLogin, .loginBtn {
+        width: 140px;
         margin-top: 10px;
     }
 
@@ -266,10 +260,8 @@ footer {
     }
 }
 @media only screen and (max-width: 812px) {
-
-    #reel2 {
-        height: 70px;
-        margin-right: 15px;
+    h2 {
+        font-size: 26px;
     }
 
     #build {
@@ -283,75 +275,86 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    body {
-        background-size: cover;
-        height: 110vh;
+   
+    .homeLink {
+        margin-right: 5px;
+    }
 
+    .inputLogin {
+        margin-left: 0px;
+        width: 140px;
+        margin-top: 0px;
+    }
+    .loginBtn {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    footer {
+        bottom: 30px;
     }
 
     #build {
-        margin-top: 60px;
         margin-left: 80px;
     }
 
     #genre {
         margin-left: 80px;
-        margin-top: 220px;
+        margin-top: 40px;
     }
 }
 
 @media only screen and (max-width: 736px) {
+    header {
+        font-size: 46px;
+    }
 
-    #mainHeader {
-        height: 30px;
+    .homeLink {
+        font-size: 16px;
+        float: left;
+        margin-left: 14px;
+    }
+
+    .login-form {
+        margin-bottom: 10px;
+    }
+
+    .inputLogin, .loginBtn {
+        width: 200px;
     }
 
     #build {
         margin-left: 0px;
         margin-top: 0px;
-        height: 148px;
+        margin-right: 0px;
+        height: 300px;
+        
     }
 
     #genre {
-        margin-left: 320px;
-        margin-top: 0px;
-        height: 148px;
+        height: 300px;
+        margin-top: 20px;
+        margin-left: 0px;
+        margin-bottom: 100px;
+        
     }
 }
 
 @media only screen and (max-width: 720px) {
-    #build {
-        margin-left: 20px;
-    }
+    
 }
 
 @media only screen and (max-width: 667px) {
 
-    #reel2 {
-        height: 60px;
-        margin-right: 10px;
-    }
-
-    #build {
-        margin-left: 20px;
-    }
 }
 
 @media only screen and (max-width: 568px) {
-    #reel2 {
-        height: 55px;
-    }
+
 
 }
 
 @media only screen and (max-width: 540px) {
-    #reel2 {
-        margin-right: 10px;
-    }
-    #build {
-        margin-left: 80px;
-        margin-top: 20px;
-    }
+   
 }
 
 @media only screen and (max-width: 414px) {
@@ -365,87 +368,138 @@ footer {
         margin-right: 0px;
     }
 
+    #build {
+        margin-left: 20px;
+    }
    
     #genre {
-        margin-left: 200px;
-        margin-top: 100px;
-    }
-    .loginBtn {
-        margin-right: 66px;
-    }
-
-    footer {
-        font-size: 14px;
-    }
-}
-
-@media only screen and (max-width: 411px) {
-    #build {
-        margin-top: 60px;
-    }
-    #genre {
-        margin-top: 100px;
-    }
-    .loginBtn {
-        margin-right: 62px;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    #reel2 {
-        height: 45px;
-    }
-    .loginBtn {
-        margin-right: 26px;
-    }
-}
-
-@media only screen and (max-width: 360px) {
-    #build {
+        margin-left: 20px;
         margin-top: 20px;
+    }
+
+    h2 {
         margin-left: 40px;
     }
-    .loginBtn {
-        margin-right: 12px;
-    }
-}
 
-@media only screen and (max-width: 320px) {
-   
-    body {
-        height: 120vh;
+    .login-form, .signup-form {
+        margin-left: 50px;
     }
 
-    a {
-        font-size: 16px;
-    }
-
-    #reel2 {
-        margin-left: 0px;
-        margin-top: 5px;
-        height: 40px;
-    }
-    
-    #genre {
-        margin-left: 160px;
+    .inputLogin, .loginBtn {
+        width: 190px;
     }
 
     .loginBtn {
         margin-right: 10px;
     }
-}
 
-@media only screen and (max-width: 280px) {
-    a {
+    footer {
         font-size: 14px;
     }
 
-    #reel2 {
-        margin-left: 5px;
+    #search-artist {
+        width: 150px;
     }
 
-    #genre {
-        margin-left: 80px;
-        margin-top: 140px;
+    #searchBtn {
+        margin-left: 5px;
+        width: 150px;
+        font-size: 13px;
+        height: 36px;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    
+}
+
+@media only screen and (max-width: 375px) {
+
+    .inputLogin, .loginBtn {
+        width: 160px;
+    }
+
+    .new-record {
+       width: 360px;
+       margin-left: 0px;
+    }
+
+    #search-artist {
+        width: 130px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    header {
+        font-size: 38px;
+    }
+    #build, #genre {
+        height: 280px;
+    } 
+    
+    .inputLogin, .loginBtn {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .homeLink {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    #build, #genre {
+        height: 260px;
+    } 
+
+    .signup-form, .login-form {
+        font-size: 14px;
+    }
+   
+    .inputLogin, .loginBtn {
+        width: 120px;
+    }
+
+    #search-artist {
+        width: 200px;
+        margin-left: 20px;
+    }
+    #searchBtn {
+        width: 200px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .new-record {
+        width: 300px;
+    }
+
+     .crate-button {
+         width: 126px;
+         font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    header {
+        font-size: 34px;
+    }
+    .homeLink {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+
+    #build, #genre {
+        height: 240px;
+    }
+
+    footer {
+        font-size: 12px;
+        bottom: 0px;
+    }
+
+    .inputLogin, .loginBtn {
+        width: 100px;
     }
 }
