@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, } = require('../models');
 const withAuth = require('../utils/auth');
+const getRecordById = require("../utils/searchById")
 
 router.get(['/', '/home'], async (req, res) => {
   console.log("user status ---------------------------", req.session.logged_in)
@@ -39,6 +40,10 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/:masterId', (req, res) => {
+  res.render('byRecord')
+});
+
 
 // router.get('/signup', async (req, res) => {
 //   if (req.session.loggedIn) {
@@ -48,5 +53,7 @@ router.get('/login', (req, res) => {
 //   res.render('signup');
 
 // });
+
+
 
 module.exports = router;

@@ -2,6 +2,7 @@
 const fetch = require("node-fetch");
 const getSearch = require("../../utils/search")
 
+
 const router = require('express').Router();
 const { User, Record } = require('../../models');
 const withAuth = require("../../utils/auth");
@@ -27,6 +28,7 @@ router.get('/:userArtistSearch', async (req, res) => {
       console.log(err);
     }
 })
+
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

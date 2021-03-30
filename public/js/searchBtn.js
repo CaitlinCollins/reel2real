@@ -15,13 +15,17 @@ const search = async (event) => {
         if (response.ok) {
             let results = await response.json();
             console.log(results);
+            console.log(results.length);
+            if (results.length === 0) {
+                document.querySelector("#recordList").textContent = "No results found for this search. Please try again."
+              }  
             
 
-            function renderDivs(i, results){
+            function renderDivs(i, results) {
 
                 var name = results[i].record_name;
                 var genre = "Genre: " + results[i].genre;
-                var price = "Price: $" + results[i].price + ".00";
+                var price = "Price: $" + results[i].price;
                 var imageSrc = results[i].imageUrl;
                 var mainUrl = results[i].resourceUrl;
 
@@ -32,7 +36,7 @@ const search = async (event) => {
                 newImage.setAttribute("src", imageSrc);
                 newImage.setAttribute("class", "record-image");
                 newImage.setAttribute("id", "recordImage" + i);
-                newImage.setAttribute("alt", results.record_name);
+                newImage.setAttribute("alt", name);
 
                 var newRecordName = document.createElement('h3');
                 newRecordName.setAttribute("class", "record-name");
@@ -61,9 +65,9 @@ const search = async (event) => {
                 addButton.setAttribute("id", "crate-button-" + i);
 
                 var moreInfoBtn = document.createElement('button');
-                moreInfoBtn.textContent = "Tell Me More!";
                 moreInfoBtn.setAttribute("class", "crate-button");
                 moreInfoBtn.setAttribute("id", "more-button-" + i);
+                moreInfoBtn.innerHTML = '<a href = "/' + results[i].masterId + '" title = "' + name + '">Tell Me More!</a>'
 
                 newRecord.id = "record-index-" + i;
                 newRecord.appendChild(newImage);
@@ -75,13 +79,13 @@ const search = async (event) => {
                 document.querySelector("#recordList").append(newRecord);
 
                 console.log(name + genre + price + imageSrc + mainUrl);
+               
                 
                 }
 
             for (i=0; i<results.length; i++) {
 
                 renderDivs(i, results);
-                
                 
             }
             
