@@ -16,6 +16,7 @@ const withAuth = require('../utils/auth');
 // });
 
 
+
 router.get('/', withAuth, async (req, res) => {
   try {
     const crateData = await Record.findAll(
@@ -33,8 +34,7 @@ router.get('/', withAuth, async (req, res) => {
         }
       });
     
-    const user_crates = crateData.map((user_crate) => 
-    user_crate.get( { plain: true })
+    const user_crates = crateData.map((user_crate) => user_crate.get( { plain: true })
     );
     res.render('crates', {
       user_crates,

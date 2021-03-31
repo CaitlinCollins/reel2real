@@ -24,15 +24,11 @@ Record.init(
       allowNull: false,
     },
     price: {
-      type: DataTypes.DECIMAL(10.2),
+      type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isDecimal: true,
-      },
     },
     masterId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
     imageUrl: {
       type: DataTypes.STRING,
@@ -41,7 +37,6 @@ Record.init(
 
     resourceUrl: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
