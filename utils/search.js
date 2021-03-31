@@ -10,7 +10,7 @@ async function getSearch(routeResponse, artistSearch) {
 
 
 	// var queryUrl = `https://api.discogs.com/database/search?key=${apiKey}&secret=${apiSecret}&genre=${genre}&artist=${artist}&per_page=15&page=1`;
-	// var imageQueryURL = "https://api.discogs.com/masters/{id}?key=nvWMvkXWSygfbACCOVQc&secret=mDVWMOCUTByoFszZgQyjUBnYcYbjnkYB"
+	
 
 
     var queryUrl = `https://api.discogs.com/database/search?key=${apiKey}&secret=${apiSecret}&artist=${artistSearch}&format=album+vinyl&country=us&per_page=15&page=1`; 
@@ -32,7 +32,10 @@ async function getSearch(routeResponse, artistSearch) {
 		filteredRecords.push(newRecord);
 	}
 	// console.log(filteredRecords);
+	
+
 	return routeResponse.json(filteredRecords);
+	
 }
 
 module.exports = getSearch;
