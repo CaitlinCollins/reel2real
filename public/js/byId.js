@@ -68,7 +68,8 @@ const byId = async () => {
                 newRecord.appendChild(newTrackList);
                 newRecord.appendChild(newInventory);
                 newRecord.appendChild(backButton);
-                newRecord.appendChild(addButton);
+                // Ice-boxing this button
+                // newRecord.appendChild(addButton);
                 document.querySelector("#recordInfo").append(newRecord);
 
 
