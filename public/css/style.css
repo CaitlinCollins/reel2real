@@ -99,6 +99,17 @@ footer {
     overflow: hidden;
 }
 
+.record-by-id {
+    height: auto;
+    width: auto;
+}
+
+ol {
+    color: turquoise;
+    list-style-position: inside;
+    margin-right: 30px;
+}
+
 .crate-button {
     background-color: turquoise;
     margin-bottom: 5px;
@@ -119,6 +130,10 @@ footer {
     color: turquoise;
     font-weight: bold;
     text-decoration: none;
+}
+
+.record-artist {
+    margin-left: 10px;
 }
 
 .card-text, .record-name, .genre, .price {
@@ -163,6 +178,7 @@ footer {
 #newRecord {
     display: inline-block;
 }
+
 
 #build {
     height: 320px;
@@ -474,9 +490,9 @@ footer {
         width: 300px;
     }
 
-     .crate-button {
-         width: 126px;
-         font-size: 12px;
+    .crate-button {
+        width: 126px;
+        font-size: 12px;
     }
 }
 
