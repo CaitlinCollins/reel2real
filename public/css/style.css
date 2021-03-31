@@ -9,6 +9,17 @@ body {
     
 }
 
+a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover, button:hover {
+    color: antiquewhite;
+}
+
 header {
     font-size: 46px;
     letter-spacing: 2px;
@@ -110,7 +121,7 @@ ol {
     margin-right: 30px;
 }
 
-.crate-button {
+.crate-button, .back-button {
     background-color: turquoise;
     margin-bottom: 5px;
     margin-left: 5px;
