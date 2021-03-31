@@ -59,9 +59,9 @@ const byId = async () => {
                 addButton.setAttribute("class", "crate-button");
 
                 var backButton = document.createElement('button');
-                backButton.textContent = "Back to search!";
-                backButton.setAttribute("class", "crate-button");
-
+                backButton.setAttribute("class", "back-button");
+                backButton.innerHTML = '<a href = "/api/search">Back to search!</a>'
+        
                 newRecord.appendChild(newVideo);
                 newRecord.appendChild(newRecordName);
                 newRecord.appendChild(newDate);
@@ -71,6 +71,7 @@ const byId = async () => {
                 newRecord.appendChild(addButton);
                 document.querySelector("#recordInfo").append(newRecord);
 
+
         };
     }
 }
@@ -79,3 +80,4 @@ const byId = async () => {
   
 
 byId();
+
