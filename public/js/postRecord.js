@@ -1,66 +1,44 @@
-const newRecord = async (event) => {
-    event.preventDefault();
-    var recordDivs = document.getElementsByClassName('new-record');
-        console.log(recordDivs.length);
-    var check = function() {
-      if (recordDivs.length===0) {
-      setTimeout(check, 1000);
-      console.log(recordDivs.length);
-      } else {
-        console.log(recordDivs.length);
-        let filteredRecords = [];
-        
-        
-        for (i = 0; i < recordDivs.length; i++){
-          let image = recordDivs[i].querySelector('.record-image').src;
-          let recordName = recordDivs[i].querySelector('.record-name').textContent;
-          let newGenre = recordDivs[i].querySelector('.genre').textContent;
-          let priceTag = recordDivs[i].querySelector('.price').textContent.split('$')[1];
-          const newRecord = {
-            imageUrl: image,
-            record_name: recordName,
-            price: priceTag,
-            genre: newGenre
-          }
-          console.log(newRecord);
-          filteredRecords.push(newRecord);
-<<<<<<< HEAD
-=======
-          var dataNum = document.querySelector(`[data-id="${i}"]`);
-          console.log(dataNum);
-          document.querySelector(`[data-id="${i}"]`).addEventListener('click', addToCrate(newRecord.record_name, newRecord.genre, newRecord.price, newRecord.imageUrl));
->>>>>>> 7ac20a5e6e6fff1adb0602e85127c28d82f33b10
-        }
-      }
-    }
-    check();
-    const addToCrate = async (record_name, genre, price, imageUrl) => {
-      const response = await fetch('/api/user-crates', {
-        method: 'POST',
-        body: JSON.stringify({ 
-          record_name, 
-          genre,
-        price,
-        imageUrl,
-    }),
-        headers: { 
-          'Content-Type': 'application/json' 
-        },
-      });
+const addToCrate = async (record_name, genre, price, imageUrl) => {
+  const response = await fetch('/api/user-crates', {
+    method: 'POST',
+    body: JSON.stringify({ 
+      record_name, 
+      genre,
+    price,
+    imageUrl,
+}),
+    headers: { 
+      'Content-Type': 'application/json' 
+    },
+  });
 
-      if (response.ok) {
-        // document.location.replace('/crates');
-        console.log("added to cart")
-      } else {
-        console.log('Failed to create new post');
-      }
-    };
+  if (response.ok) {
+    // document.location.replace('/crates');
+    console.log("added to cart")
+  } else {
+    console.log('Failed to create new post');
+  }
+};
+
+function postOneRecord(event) {
+  event.preventDefault();
+  console.log(event.target.parentElement.children);
+  let image = event.target.parentElement.children[0].src;
+  let recordName = event.target.parentElement.children[1].innerText;
+  let newGenre = event.target.parentElement.children[2].innerText;
+  let priceTag = event.target.parentElement.children[3].innerText.split('$')[1];
+  const record = {
+    imageUrl: image,
+    record_name: recordName,
+    price: priceTag,
+    genre: newGenre
+  }
+  console.log(record);
+  addToCrate(record.record_name, record.genre, record.price, record.imageUrl)
+  alert(record.record_name + " added to crate.")
+  // console.log(this);
 }
 
-<<<<<<< HEAD
-var dataNum = document.querySelector(`[data-id="${i}"]`);
-          console.log(dataNum);
-          document.querySelector(`[data-id="${i}"]`).addEventListener('click', addToCrate(newRecord.record_name, newRecord.genre, newRecord.price, newRecord.imageUrl));
-=======
-document.querySelector('#searchBtn').addEventListener('click', newRecord);
->>>>>>> 7ac20a5e6e6fff1adb0602e85127c28d82f33b10
+document.querySelectorAll('.crate-button').forEach(function(button, i) {
+  console.log(button);
+})
