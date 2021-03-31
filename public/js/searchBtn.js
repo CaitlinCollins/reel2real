@@ -28,9 +28,11 @@ const search = async (event) => {
                 var price = "Price: $" + results[i].price;
                 var imageSrc = results[i].imageUrl;
                 var mainUrl = results[i].resourceUrl;
+                var masterId = results[i].masterId;
 
                 var newRecord = document.createElement('div');
                 newRecord.setAttribute("class", "card new-record");
+               
 
                 var newImage = document.createElement('img');
                 newImage.setAttribute("src", imageSrc);
@@ -40,8 +42,8 @@ const search = async (event) => {
 
                 var newRecordName = document.createElement('h3');
                 newRecordName.setAttribute("class", "record-name");
-                newRecordName.setAttribute("id", 'record-title-' + i)
-                newRecordName.innerHTML = '<a class= "record-name" href = ' + mainUrl + '>' + name + '</a>';
+                newRecordName.setAttribute("id", masterId)
+                newRecordName.textContent = name;
 
                 var newGenre = document.createElement('h3')
                 newGenre.setAttribute("class", 'genre')
@@ -67,10 +69,10 @@ const search = async (event) => {
                 addButton.addEventListener('click', postOneRecord);
 
                 var moreInfoBtn = document.createElement('button');
-                moreInfoBtn.setAttribute("class", "crate-button");
+                moreInfoBtn.setAttribute("class", "more-button");
                 moreInfoBtn.setAttribute("id", "more-button-" + i);
                 
-                moreInfoBtn.innerHTML = '<a href = "/record/' + results[i].masterId + '" title = "' + name + '">Tell Me More!</a>'
+                moreInfoBtn.innerHTML = '<a href = "/record/' + masterId + '" title = "' + name + '">Tell Me More!</a>'
 
                 newRecord.id = "record-index-" + i;
                 newRecord.appendChild(newImage);

@@ -9,7 +9,8 @@ router.get('/', withAuth, async (req, res) => {
     'record_name',
     'genre',
     'price',
-    'imageUrl'],
+    'imageUrl',
+    'masterId'],
     include: [{
       model: User,
       attributes: ['id',
@@ -29,7 +30,8 @@ router.post('/', withAuth, async (req, res) => {
           genre: req.body.genre,
           price: req.body.price,
           imageUrl: req.body.imageUrl,
-          user_id: req.session.user_id
+          user_id: req.session.user_id,
+          masterId: req.body.masterId
       });
   
       res.status(200).json(newRecord);
