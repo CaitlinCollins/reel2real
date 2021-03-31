@@ -64,6 +64,7 @@ const search = async (event) => {
                 addButton.setAttribute("class", "crate-button");
                 addButton.setAttribute("id", "crate-button-" + i);
                 addButton.setAttribute("data-id", i);
+                addButton.addEventListener('click', postOneRecord);
 
                 var moreInfoBtn = document.createElement('button');
                 moreInfoBtn.setAttribute("class", "crate-button");
@@ -79,8 +80,6 @@ const search = async (event) => {
                 newRecord.appendChild(moreInfoBtn);
                 newRecord.appendChild(addButton);
                 document.querySelector("#recordList").append(newRecord);
-
-                console.log(name + genre + price + imageSrc + mainUrl);
                
                 
                 }
