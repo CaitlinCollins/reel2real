@@ -24,6 +24,12 @@ const newRecord = async (event) => {
           }
           console.log(newRecord);
           filteredRecords.push(newRecord);
+<<<<<<< HEAD
+=======
+          var dataNum = document.querySelector(`[data-id="${i}"]`);
+          console.log(dataNum);
+          document.querySelector(`[data-id="${i}"]`).addEventListener('click', addToCrate(newRecord.record_name, newRecord.genre, newRecord.price, newRecord.imageUrl));
+>>>>>>> 7ac20a5e6e6fff1adb0602e85127c28d82f33b10
         }
       }
     }
@@ -51,6 +57,10 @@ const newRecord = async (event) => {
     };
 }
 
+<<<<<<< HEAD
 var dataNum = document.querySelector(`[data-id="${i}"]`);
           console.log(dataNum);
           document.querySelector(`[data-id="${i}"]`).addEventListener('click', addToCrate(newRecord.record_name, newRecord.genre, newRecord.price, newRecord.imageUrl));
+=======
+document.querySelector('#searchBtn').addEventListener('click', newRecord);
+>>>>>>> 7ac20a5e6e6fff1adb0602e85127c28d82f33b10

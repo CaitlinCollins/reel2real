@@ -14,8 +14,8 @@ const search = async (event) => {
 
         if (response.ok) {
             let results = await response.json();
-            console.log(results);
-            console.log(results.length);
+            // console.log(results);
+            // console.log(results.length);
             if (results.length === 0) {
                 document.querySelector("#recordList").textContent = "No results found for this search. Please try again."
               }  
@@ -63,11 +63,13 @@ const search = async (event) => {
                 addButton.textContent = "Add to My Crate!";
                 addButton.setAttribute("class", "crate-button");
                 addButton.setAttribute("id", "crate-button-" + i);
+                addButton.setAttribute("data-id", i);
 
                 var moreInfoBtn = document.createElement('button');
                 moreInfoBtn.setAttribute("class", "crate-button");
                 moreInfoBtn.setAttribute("id", "more-button-" + i);
-                moreInfoBtn.innerHTML = '<a href = "/' + results[i].masterId + '" title = "' + name + '">Tell Me More!</a>'
+                
+                moreInfoBtn.innerHTML = '<a href = "/record/' + results[i].masterId + '" title = "' + name + '">Tell Me More!</a>'
 
                 newRecord.id = "record-index-" + i;
                 newRecord.appendChild(newImage);

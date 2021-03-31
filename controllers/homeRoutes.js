@@ -40,7 +40,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/:masterId', (req, res) => {
+router.get('/record/:masterId', (req, res) => {
   res.render('byRecord')
 });
 

@@ -12,7 +12,7 @@ async function getRecordById(routeResponse, masterId) {
 
 
 	// var queryUrl = `https://api.discogs.com/database/search?key=${apiKey}&secret=${apiSecret}&genre=${genre}&artist=${artist}&per_page=15&page=1`;
-	// var imageQueryURL = "https://api.discogs.com/masters/{id}?key=nvWMvkXWSygfbACCOVQc&secret=mDVWMOCUTByoFszZgQyjUBnYcYbjnkYB"
+	
 
 
     var queryUrl = `https://api.discogs.com/masters/${masterId}`
