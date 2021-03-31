@@ -23,29 +23,29 @@ const byId = async (event) => {
             
 
             var album = results.title
-            var artist = "Artist: " + results.artists;
-            var inventory = "Inventory: " + results.inventory + " in stock"
+            var artist = " - " + results.artists;
+            var inventory = "Inventory: " + results.inventory + " in stock!"
             var date = "Released in " + results.release_date
             
             var youtubeId = results.videoUrl
             
 
                 var newRecord = document.createElement('div');
-                newRecord.setAttribute("class", "card new-record");
+                newRecord.setAttribute("class", "card record-by-id");
 
                 var newVideo = document.createElement('p')
                 newVideo.innerHTML = '<iframe width="560" height="315" src="http://www.youtube.com/embed/' + youtubeId + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
                 var newRecordName = document.createElement('h3');
                 newRecordName.setAttribute("class", "record-name");
-                newRecordName.innerHTML = album;
+                newRecordName.innerHTML = album + artist;
 
-                var newArtist = document.createElement('h3')
-                newArtist.setAttribute("class", 'price');
-                newArtist.textContent = artist;
+                // var newArtist = document.createElement('h3')
+                // newArtist.setAttribute("class", 'price');
+                // newArtist.textContent = date;
 
                 var newDate = document.createElement('h3')
-                newDate.setAttribute("class", 'genre')
+                newDate.setAttribute("class", 'price')
                 newDate.textContent = date;
 
                 var newInventory = document.createElement('h3')
@@ -68,8 +68,9 @@ const byId = async (event) => {
 
                 newRecord.appendChild(newVideo);
                 newRecord.appendChild(newRecordName);
-                newRecord.appendChild(newArtist);
+                newRecord.appendChild(newDate);
                 newRecord.appendChild(newTrackList);
+                newRecord.appendChild(newInventory);
                 newRecord.appendChild(backButton);
                 newRecord.appendChild(addButton);
                 document.querySelector("#recordInfo").append(newRecord);
