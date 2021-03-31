@@ -99,7 +99,7 @@ footer {
     margin-left: 27px;
 }
 
-.new-record {
+.new-record, .my-records {
     margin: 10px 10px 40px 10px;
     width: 400px;
     height: 480px;
@@ -121,7 +121,7 @@ ol {
     margin-right: 30px;
 }
 
-.crate-button, .back-button {
+.crate-button, .back-button, .more-button {
     background-color: turquoise;
     margin-bottom: 5px;
     margin-left: 5px;
