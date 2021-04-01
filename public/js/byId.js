@@ -30,7 +30,7 @@ const byId = async () => {
                 newRecord.setAttribute("class", "card record-by-id");
 
                 var newVideo = document.createElement('p')
-                newVideo.innerHTML = '<iframe width="560" height="315" src="http://www.youtube.com/embed/' + youtubeId + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                newVideo.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + youtubeId + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
                 
                 newVideo.setAttribute("class", "video-embed")
 
