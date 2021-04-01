@@ -55,11 +55,17 @@
   
   ## Contact/Contributors
   GitHub: @CaitlinCollins
+  
           @ChrisBoisjoli
+          
           @frank-merk
+          
           @aminbashir65
 
   Email: caitlin.aileen86@gmail.com
+  
          christopherboisjoli@gmail.com
+         
          jlimhb@gmail.com
+         
          aminbashir65@gmail.com
