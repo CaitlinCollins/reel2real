@@ -29,19 +29,19 @@
   ## Screenshots
   
   ### Home
-  ![home](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/login.png)
+  ![home](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/home.png)
   
   ### Login/Signup
-  ![login](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/home.png)
+  ![login](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/login.png)
   
   ### Search
-  ![search](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/view.png)
+  ![search](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/mysearch.png)
   
   ### View Album Info
-  ![view](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/dashboard.png)
+  ![view](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/view.png)
   
   ### My Crate
-  ![crate](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/create.png)
+  ![crate](https://github.com/CaitlinCollins/reel2real/blob/main/public/images/crate.png)
   
   
   ## Contributing
