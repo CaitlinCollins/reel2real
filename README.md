@@ -54,7 +54,9 @@
   This project is protected under the MIT license.
   
   ## Contact/Contributors
-  GitHub: @CaitlinCollins
+  GitHub: 
+         
+          @CaitlinCollins
   
           @ChrisBoisjoli
           
@@ -62,7 +64,9 @@
           
           @aminbashir65
 
-  Email: caitlin.aileen86@gmail.com
+  Email: 
+  
+         caitlin.aileen86@gmail.com
   
          christopherboisjoli@gmail.com
          
